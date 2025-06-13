@@ -25,7 +25,7 @@ LANGUAGE_FONTS = {
 
 # The API key will be provided by the Canvas runtime if empty.
 # In a real-world scenario outside Canvas, you would replace this with your actual Gemini API key.
-GEMINI_API_KEY = ""
+GEMINI_API_KEY = "AIzaSyC5oxJPaBr2x2KnkT6PtP0etivV4trAu9o"
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 # --- Streamlit UI ---
