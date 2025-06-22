@@ -1,5 +1,7 @@
 streamlit
-deep-translator
-diffusers
 torch
+transformers
+diffusers[torch]
 Pillow
+deep-translator
+
