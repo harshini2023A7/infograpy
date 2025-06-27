@@ -5,6 +5,10 @@ from io import BytesIO
 import torch
 from diffusers import StableDiffusionPipeline
 
+# Streamlit UI
+st.set_page_config(page_title="Indic Infographic Generator", layout="wide")
+st.title("🌐 ChitraKatha")
+
 # Load model (you only need to do this once)
 @st.cache_resource
 def load_model():
@@ -76,10 +80,6 @@ def overlay_text(image, text, language):
     output.seek(0)
     return output
 
-# Streamlit UI
-st.set_page_config(page_title="Indic Infographic Generator", layout="wide")
-st.title("🌐 Indic Language Infographic Generator")
-
 text_input = st.text_area("Enter a message in English:", "Save water, save life.")
 language = st.selectbox("Choose target language", list(LANGUAGE_MAP.keys()))
 
@@ -89,10 +89,10 @@ if st.button("Generate Infographic"):
         generated_img = generate_image(text_input)
         final_output = overlay_text(generated_img, translated, language)
 
-        st.image(final_output, caption=f"Infographic in {language}", use_column_width=True)
+        st.image(final_output, caption=f"Infographic in {language}", use_container_width=True)
         st.download_button(
             label="📥 Download Infographic",
             data=final_output,
             file_name=f"infographic_{language}.png",
             mime="image/png"
-        )
+        )
