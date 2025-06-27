@@ -1,8 +1,8 @@
-streamlit>=1.28.0
-pillow>=10.0.0
-openai>=0.28.0
-python-dotenv>=1.0.0
-deep-translator>=1.11.4
-requests>=2.31.0
-numpy>=1.24.0
+streamlit>
+pillow>
+openai>
+python-dotenv>
+deep-translator>
+requests>
+numpy>
 
