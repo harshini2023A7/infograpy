@@ -94,5 +94,4 @@ if st.button("Generate Infographic"):
             label="📥 Download Infographic",
             data=final_output,
             file_name=f"infographic_{language}.png",
-            mime="image/png"
-        )
+            mime="image/png")
